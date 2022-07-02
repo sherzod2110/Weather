@@ -26,7 +26,7 @@ elForm.addEventListener("submit", function (e) {
     e.preventDefault()
 
     let inputValue = elFormInput.value;
-
+    elFormInput.value = null;
     getLocationData(inputValue)
 });
 
