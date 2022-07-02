@@ -1,0 +1,80 @@
+.form {
+  max-width: 500px;
+  height: 300px;
+  background-color: beige;
+  border-radius: 25px;
+  background-color: rgba(1, 1, 3, 0.5);
+  padding: 30px 50px 50px 50px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.form__input {
+  width: 250px;
+  border-radius: 20px;
+  outline: none;
+  background-color: rgba(5, 5, 5, 0.5);
+  padding: 10px 40px 10px 20px;
+  border: none;
+  color: azure;
+}
+
+.form__input:focus {
+  background-color: rgba(5, 5, 5, 0.5);
+}
+
+.form__input::placeholder {
+  color: rgb(171, 171, 171);
+}
+
+.form_img {
+  width: 25px;
+  height: auto;
+  position: absolute;
+  filter: invert(74%) sepia(10%) saturate(331%) hue-rotate(131deg)
+    brightness(89%) contrast(90%);
+  top: 38px;
+  left: 262px;
+}
+
+.wearher__name {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 35px;
+}
+
+.weather__country {
+  color: #fff;
+  font-size: 20px;
+}
+
+.weather__temper {
+  color: #fff;
+  margin-top: 10px;
+}
+
+.weather__speed {
+  color: #fff;
+  margin-top: 5px;
+}
+
+.video {
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  /* mix-blend-mode: overlay; */
+  object-fit: cover;
+}
+
+body {
+  overflow: hidden;
+}
+.box-inner {
+  padding-top: 180px;
+}
+
+
+@media screen {
+    
+}
