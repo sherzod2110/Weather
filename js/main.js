@@ -6,7 +6,7 @@ const renderWeather = function(www) {
     const html = `
     <h2 class="wearher__name">${www.name}</h2>
     <p class="weather__country">Country: ${www.sys.country}</p>
-    <p class="weather__temper">${www.main.temp}°C</p>
+    <p class="weather__temper">Temperatura: ${www.main.temp}°C</p>
     <p class="weather__speed">Speed: ${www.wind.speed}m/s</p>
     `
     elWrapper.innerHTML = null;
