@@ -75,10 +75,3 @@ body {
 }
 
 
-.hero__img {
-    width: 200px;
-    height: auto;
-    border-radius: 50px;
-    margin-top: -200px;
-    margin-left: 200px;
-}
