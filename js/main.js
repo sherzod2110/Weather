@@ -1,32 +1,31 @@
 let elForm = $(".form");
-let elFormInput = $(".form__input");
+let elInput = $(".form__input");
 let elWrapper = $(".weather");
 
-const renderWeather = function(www) {
+const renderWeather = function(info) {
     const html = `
-    <h2 class="wearher__name">${www.name}</h2>
-    <p class="weather__country">Country: ${www.sys.country}</p>
-    <p class="weather__temper">Temperatura: ${www.main.temp}°C</p>
-    <p class="weather__speed">Speed: ${www.wind.speed}m/s</p>
+    <h2 class="wearher__name">${info.name}</h2>
+    <p class="weather__country">Country: ${info.sys.country}</p>
+    <p class="weather__temper">Temperatura: ${info.main.temp}°C</p>
+    <p class="weather__speed">Speed: ${info.wind.speed}m/s</p>
     `
     elWrapper.innerHTML = null;
     elWrapper.insertAdjacentHTML("beforeend", html)
 }
 
 
-const callData = function (location) {
-    const api = fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=277e160f5af509c9f6e384d7cbe3501c`)
+const callData = function (worldWeather) {
+       fetch(`https://api.openweathermap.org/data/2.5/weather?q=${worldWeather}&units=metric&appid=277e160f5af509c9f6e384d7cbe3501c`)
          .then(ops => ops.json())
-         .then(data => renderWeather(data));
-    return api
+         .then(info => renderWeather(info));
 }
 
 
-elForm.addEventListener("submit", function (e) {
-    e.preventDefault()
+elForm.addEventListener("submit", (event)=> {
+    event.preventDefault()
 
-    let inputValue = elFormInput.value;
-    elFormInput.value = null;
+    let inputValue = elInput.value;
+    elInput.value = null;
     callData(inputValue)
 });
 
